@@ -19,28 +19,28 @@ const Footer = () => {
             <div className="title">LOGO</div>
             <div className="details">
               <Link href="/" passHref>
-                <a className="keyValue">
+                <div className="keyValue">
                   <span className="key">
                     <MdOutlinePhoneInTalk />
                   </span>
                   <span className="value">+1234567890</span>
-                </a>
+                </div>
               </Link>
               <Link href="/" passHref>
-                <a className="keyValue">
+                <div className="keyValue">
                   <span className="key">
                     <MdOutlineEmail />
                   </span>
                   <span className="value">annunakimall@gmail.com</span>
-                </a>
+                </div>
               </Link>
               <Link href="/" passHref>
-                <a className="keyValue">
+                <div className="keyValue">
                   <span className="key">
                     <IoLocationOutline />
                   </span>
                   <span className="value">Annunaki Villa</span>
-                </a>
+                </div>
               </Link>
             </div>
             <div className="socials">
@@ -79,12 +79,12 @@ const Footer = () => {
             <div className="details">
               {importantLinks.map((item) => (
                 <Link href={item.path} passHref key={item.id}>
-                  <a className="keyValue">
+                  <div className="keyValue">
                     <span className="key">
                       <IoMdArrowDropright />
                     </span>
                     <span className="value">{item.name}</span>
-                  </a>
+                  </div>
                 </Link>
               ))}
             </div>
@@ -94,12 +94,12 @@ const Footer = () => {
             <div className="details">
               {myAccountLinks.map((item) => (
                 <Link href={item.path} passHref key={item.id}>
-                  <a className="keyValue">
+                  <div className="keyValue">
                     <span className="key">
                       <IoMdArrowDropright />
                     </span>
                     <span className="value">{item.name}</span>
-                  </a>
+                  </div>
                 </Link>
               ))}
             </div>
@@ -109,12 +109,12 @@ const Footer = () => {
             <div className="details">
               {serviceLinks.map((item) => (
                 <Link href={item.path} passHref key={item.id}>
-                  <a className="keyValue">
+                  <div className="keyValue">
                     <span className="key">
                       <IoMdArrowDropright />
                     </span>
                     <span className="value">{item.name}</span>
-                  </a>
+                  </div>
                 </Link>
               ))}
             </div>

@@ -65,7 +65,7 @@ const Navbar = () => {
             {!currentUser ? (
               <Link href="/user" className="item">
                 <IoMdContact className="icon" />
-                <span>My Account</span>
+                <span className="myAccount">My Account</span>
               </Link>
             ) : (
               <Link href="/auth" className="item">

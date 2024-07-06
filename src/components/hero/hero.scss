@@ -6,6 +6,10 @@
   display: flex;
   gap: 20px;
 
+  @include mobile550 {
+    height: 40vh;
+  }
+
   .category {
     flex: 2.4;
     padding: 12px 20px;

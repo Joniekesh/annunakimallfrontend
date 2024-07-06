@@ -125,6 +125,10 @@
           font-weight: bold;
         }
       }
+
+      @include mobile550 {
+        display: none;
+      }
     }
   }
 }

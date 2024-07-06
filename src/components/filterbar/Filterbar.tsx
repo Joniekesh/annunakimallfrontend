@@ -28,7 +28,7 @@ const Filterbar = () => {
           </Link>
           <div className="search">
             <div className="category">
-              <span>All Category</span>
+              <span>Categories</span>
               <span>
                 <FaCaretDown />
               </span>
