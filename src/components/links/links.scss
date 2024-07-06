@@ -1,0 +1,163 @@
+@import "../../app/global.scss";
+
+.links {
+  width: 100vw;
+  background-color: $bgSecondary;
+  color: $textLight;
+
+  @include miniLaptop {
+    display: none;
+  }
+
+  .linksWrapper {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    .leftWrapper {
+      display: flex;
+      align-items: center;
+      gap: 50px;
+
+      .categoryContainer {
+        background-color: $bgPrimary;
+        color: $textLight;
+        height: 100%;
+        width: 250px;
+        padding: 12px 20px;
+        display: flex;
+        flex-direction: column;
+        position: relative;
+
+        .top {
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+
+          .icon {
+            cursor: pointer;
+          }
+        }
+
+        ul {
+          width: 100%;
+          position: absolute;
+          top: 100%;
+          left: 0;
+          -webkit-box-shadow: 0px 0px 16px -8px rgba(0, 0, 0, 0.68);
+          box-shadow: 0px 0px 16px -8px rgba(0, 0, 0, 0.68);
+          background-color: $bgLight;
+          color: $textDark;
+
+          .parentCategory {
+            padding: 8px;
+            width: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            cursor: pointer;
+            font-size: 16px;
+            border-bottom: 1px solid #ddd;
+            position: relative;
+
+            .leftItem {
+              display: flex;
+              align-items: center;
+              gap: 20px;
+            }
+
+            .caret {
+              color: $bgPrimary;
+            }
+
+            &:hover {
+              color: $bgPrimary;
+              background-color: #ddd;
+            }
+            &.active {
+              color: $bgPrimary;
+              background-color: #ddd;
+            }
+          }
+        }
+
+        .subCatList {
+          position: absolute;
+          top: 100%;
+          left: 250px;
+          display: flex;
+          flex-wrap: wrap;
+          gap: 16px;
+          padding: 20px;
+          width: 300px;
+
+          li {
+            cursor: pointer;
+
+            &:hover {
+              color: $bgPrimary;
+            }
+          }
+        }
+
+        .mainCatList {
+          position: absolute;
+          top: 100%;
+          left: 550px;
+          display: flex;
+          flex-wrap: wrap;
+          gap: 20px;
+          padding: 20px;
+          width: 300px;
+
+          li {
+            cursor: pointer;
+
+            &:hover {
+              color: $bgPrimary;
+            }
+          }
+        }
+      }
+      // HERE
+
+      .mainLinks {
+        display: flex;
+        flex-direction: column;
+        position: relative;
+        height: 100%;
+
+        .topMainLinks {
+          display: flex;
+          align-items: center;
+          gap: 20px;
+          font-size: 18px;
+
+          .link {
+            display: flex;
+            align-items: center;
+            gap: 2px;
+            cursor: pointer;
+
+            &:hover {
+              color: yellow;
+            }
+          }
+        }
+      }
+    }
+
+    .rightWrapper {
+      display: flex;
+      align-items: center;
+      gap: 20px;
+      font-size: 18px;
+
+      .link {
+        &:hover {
+          color: $bgPrimary;
+        }
+      }
+    }
+  }
+}

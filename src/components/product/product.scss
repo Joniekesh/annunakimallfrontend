@@ -1,0 +1,61 @@
+@import "../../app//global.scss";
+
+.product {
+  width: 220px;
+  height: 250px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: lightgray;
+  border-radius: 10px;
+  padding: 8px;
+  gap: 5px;
+  cursor: pointer;
+  transition: all 0.3s;
+
+  @include mobile550 {
+    width: 90%;
+  }
+
+  &:hover {
+    transform: scale(1.02);
+    border: 2px solid $bgPrimary;
+  }
+
+  span {
+    align-self: flex-end;
+    color: goldenrod;
+    font-weight: bold;
+  }
+
+  .imageContainer {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 90%;
+    height: 60%;
+    border-radius: 10px;
+    overflow: hidden;
+  }
+
+  .details {
+    align-self: flex-start;
+    display: flex;
+    flex-direction: column;
+    gap: 3px;
+    height: 40%;
+
+    .name {
+    }
+
+    .price {
+      font-weight: bold;
+      font-size: 18px;
+    }
+
+    .discount {
+      opacity: 0.5;
+    }
+  }
+}

@@ -1,0 +1,88 @@
+@import "../../app/global.scss";
+
+.navbar {
+  background-color: $bgPrimary;
+  width: 100vw;
+  color: $textLight;
+
+  .navbarWrapper {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 0px;
+
+    .left,
+    .right {
+      display: flex;
+      align-items: center;
+      gap: 20px;
+
+      .item {
+        display: flex;
+        align-items: center;
+        gap: 5px;
+        cursor: pointer;
+        font-size: 14px;
+
+        &:hover {
+          color: #cccccc;
+        }
+
+        .icon {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          font-size: 24px;
+        }
+      }
+
+      .contact {
+        @include miniLaptop {
+          display: none;
+        }
+      }
+
+      .hamburger {
+        cursor: pointer;
+        font-size: 24px;
+        display: none;
+
+        @include miniLaptop {
+          display: flex;
+        }
+      }
+    }
+
+    .left {
+      .logoWrapper {
+        display: flex;
+        align-items: center;
+        gap: 5px;
+        display: none;
+
+        @include miniLaptop {
+          display: flex;
+        }
+
+        span {
+          font-size: 20px;
+          font-weight: bold;
+        }
+      }
+
+      .item {
+        @include miniLaptop {
+          display: none;
+        }
+      }
+    }
+
+    .carousel {
+      color: #ffff99;
+
+      @include tabLet {
+        display: none;
+      }
+    }
+  }
+}

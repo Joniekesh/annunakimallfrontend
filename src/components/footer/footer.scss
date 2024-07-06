@@ -1,0 +1,106 @@
+@import "../../app/global.scss";
+
+.footer {
+  height: max-content;
+  width: 100vw;
+  background-color: $textLight;
+
+  .containerWrapper {
+    background-color: $textLight;
+    height: max-content;
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 10px 20px;
+    gap: 20px;
+
+    .item {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+
+      .title {
+        font-weight: bold;
+      }
+
+      .details {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+
+        .keyValue {
+          display: flex;
+          align-items: center;
+          gap: 2px;
+
+          &:hover {
+            color: $bgPrimary;
+          }
+        }
+      }
+
+      .socials {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+
+        a {
+          cursor: pointer;
+
+          &:hover {
+            color: $bgPrimary;
+          }
+        }
+      }
+    }
+  }
+}
+
+.bottomLink {
+  background-color: $bgPrimary;
+  height: max-content;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  color: $textLight;
+
+  .wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 20px;
+    position: relative;
+
+    @include miniLaptop {
+      flex-direction: column;
+
+      .copyright {
+        text-align: center;
+      }
+    }
+
+    .paymentGateway {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+
+      @include miniLaptop {
+        flex-direction: column;
+      }
+    }
+    .caretIcon {
+      position: absolute;
+      right: 20px;
+      top: 20px;
+      font-size: 36px;
+      font-weight: bold;
+      cursor: pointer;
+      transition: all 0.3s ease;
+
+      &:hover {
+        color: $bgSecondary;
+      }
+    }
+  }
+}

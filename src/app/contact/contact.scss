@@ -1,0 +1,15 @@
+.contact {
+  min-height: 100vh;
+
+  .contactWrapper {
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+
+    h2 {
+      font-size: 30px;
+    }
+  }
+}
