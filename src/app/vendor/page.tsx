@@ -1,6 +1,6 @@
 import PagesWrapper from "@/components/pageWrapper";
 import React from "react";
-import "./vendor.module.scss";
+import "./vendor.scss";
 
 const Vendor = () => {
   return (
