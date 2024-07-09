@@ -5,7 +5,6 @@ import React, { useEffect, useState } from "react";
 import "./navbar.scss";
 import { MdOutlinePhoneInTalk, MdOutlineEmail } from "react-icons/md";
 import { IoMdContacts, IoMdContact, IoMdPerson } from "react-icons/io";
-import { GiHamburgerMenu } from "react-icons/gi";
 import Image from "next/image";
 import { GoPencil } from "react-icons/go";
 import { IoMdLogIn } from "react-icons/io";
@@ -61,9 +60,6 @@ const Navbar = () => {
                 <span className="reg">Login / Register</span>
               </Link>
             )}
-            <div className="hamburger">
-              <GiHamburgerMenu />
-            </div>
           </div>
         </div>
       </div>

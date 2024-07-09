@@ -53,32 +53,24 @@
         }
       }
 
-      .contact {
-        @include miniLaptop {
-          display: none;
-        }
-      }
-
       .seller {
         background-color: crimson;
+
+        // @include miniLaptop {
+        //   display: none;
+        // }
       }
 
       .start {
         background-color: $bgSecondary;
+
+        // @include miniLaptop {
+        //   display: none;
+        // }
       }
 
       .auth {
         background-color: teal;
-      }
-
-      .hamburger {
-        cursor: pointer;
-        font-size: 24px;
-        display: none;
-
-        @include miniLaptop {
-          display: flex;
-        }
       }
     }
 

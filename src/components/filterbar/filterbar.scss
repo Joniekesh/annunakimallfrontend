@@ -6,23 +6,105 @@
 
   .filterbarWrapper {
     display: flex;
-    align-items: center;
+    flex-direction: column;
     justify-content: space-between;
     padding: 10px 0px;
     gap: 20px;
 
-    .logoWrapper {
+    .top {
       display: flex;
       align-items: center;
-      gap: 5px;
+      justify-content: space-between;
 
-      @include miniLaptop {
-        display: none;
+      .logoWrapper {
+        display: flex;
+        align-items: center;
+        gap: 5px;
+
+        span {
+          font-size: 20px;
+          font-weight: bold;
+        }
       }
 
-      span {
-        font-size: 20px;
-        font-weight: bold;
+      .call {
+        display: flex;
+        align-items: center;
+        gap: 2px;
+
+        @include miniLaptop {
+          display: none;
+        }
+
+        .icon {
+          font-size: 30px;
+        }
+
+        .phoneNumber {
+          display: flex;
+          flex-direction: column;
+
+          .text {
+            font-size: 14px;
+            font-weight: 400;
+          }
+
+          .phone {
+            font-weight: bold;
+            font-size: 14px;
+          }
+        }
+      }
+
+      .right {
+        display: flex;
+        align-items: center;
+        gap: 20px;
+
+        .icons {
+          display: flex;
+          align-items: center;
+          gap: 20px;
+
+          .item {
+            position: relative;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            span {
+              position: absolute;
+              top: -10px;
+              right: -10px;
+              display: flex;
+              align-items: center;
+              justify-content: center;
+              text-align: center;
+              height: 16px;
+              width: 16px;
+              border-radius: 50%;
+              background-color: $bgPrimary;
+              color: $textLight;
+              font-size: 8px;
+              font-weight: bold;
+            }
+          }
+
+          @include mobile550 {
+            display: none;
+          }
+        }
+
+        .hamburger {
+          cursor: pointer;
+          font-size: 24px;
+          display: none;
+
+          @include miniLaptop {
+            display: flex;
+          }
+        }
       }
     }
 
@@ -55,6 +137,7 @@
           border: none;
           outline: none;
           margin-left: 4px;
+          width: 90%;
         }
 
         span {
@@ -64,70 +147,6 @@
 
       &:hover {
         border: 2px solid $bgPrimary;
-      }
-    }
-
-    .call {
-      display: flex;
-      align-items: center;
-      gap: 2px;
-
-      @include miniLaptop {
-        display: none;
-      }
-
-      .icon {
-        font-size: 30px;
-      }
-
-      .phoneNumber {
-        display: flex;
-        flex-direction: column;
-
-        .text {
-          font-size: 14px;
-          font-weight: 400;
-        }
-
-        .phone {
-          font-weight: bold;
-          font-size: 14px;
-        }
-      }
-    }
-
-    .icons {
-      display: flex;
-      align-items: center;
-      gap: 20px;
-
-      .item {
-        position: relative;
-        cursor: pointer;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-
-        span {
-          position: absolute;
-          top: -10px;
-          right: -10px;
-          display: flex;
-          align-items: center;
-          justify-content: center;
-          text-align: center;
-          height: 16px;
-          width: 16px;
-          border-radius: 50%;
-          background-color: $bgPrimary;
-          color: $textLight;
-          font-size: 8px;
-          font-weight: bold;
-        }
-      }
-
-      @include mobile550 {
-        display: none;
       }
     }
   }
