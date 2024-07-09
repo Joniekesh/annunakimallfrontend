@@ -1,15 +1,14 @@
-import React from "react";
-import "./auth.scss";
 import PagesWrapper from "@/components/pageWrapper";
+import "./register.scss";
 import Reg from "@/components/utilComponents/reg/Reg";
 
-const Page = () => {
+const Register = () => {
   return (
     <PagesWrapper>
-      <div className="auth">
+      <div className="register">
         <div className="container">
-          <div className="authWrapper">
-            <Reg />
+          <div className="registerWrapper">
+            <Reg isVendor />
           </div>
         </div>
       </div>
@@ -17,4 +16,4 @@ const Page = () => {
   );
 };
 
-export default Page;
+export default Register;

@@ -90,10 +90,6 @@
               font-weight: bold;
             }
           }
-
-          // @include mobile550 {
-          //   display: none;
-          // }
         }
 
         .hamburger {
@@ -101,7 +97,7 @@
           font-size: 24px;
           display: none;
 
-          @include miniLaptop {
+          @include mobile {
             display: flex;
           }
         }

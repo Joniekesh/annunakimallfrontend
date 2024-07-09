@@ -40,7 +40,7 @@
           font-size: 24px;
         }
 
-        .reg {
+        .regText {
           @include mobile {
             display: none;
           }
@@ -55,18 +55,10 @@
 
       .seller {
         background-color: crimson;
-
-        // @include miniLaptop {
-        //   display: none;
-        // }
       }
 
       .start {
         background-color: $bgSecondary;
-
-        // @include miniLaptop {
-        //   display: none;
-        // }
       }
 
       .auth {

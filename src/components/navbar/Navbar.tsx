@@ -38,11 +38,11 @@ const Navbar = () => {
       <div className="container">
         <div className="navbarWrapper">
           <div className="left">
-            <Link href="/onboarding" className="item seller">
+            <Link href="/affiliate/auth" className="item seller">
               <GoPencil />
               <span>Become an Affiliate</span>
             </Link>
-            <Link href="/auth" className="item start">
+            <Link href="/vendor/auth" className="item start">
               <span>Start Selling</span>
             </Link>
           </div>
@@ -57,7 +57,7 @@ const Navbar = () => {
               <Link href="/auth" className="item auth">
                 <IoMdLogIn className="icon" />
                 {/* <IoMdPerson className="icon" /> */}
-                <span className="reg">Login / Register</span>
+                <span className="regText">Login / Register</span>
               </Link>
             )}
           </div>
