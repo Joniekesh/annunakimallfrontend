@@ -7,6 +7,7 @@ import { MdOutlinePhoneInTalk, MdOutlineEmail } from "react-icons/md";
 import { IoMdContacts, IoMdContact, IoMdPerson } from "react-icons/io";
 import { GiHamburgerMenu } from "react-icons/gi";
 import Image from "next/image";
+import { GoPencil } from "react-icons/go";
 
 const Navbar = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
@@ -37,38 +38,23 @@ const Navbar = () => {
       <div className="container">
         <div className="navbarWrapper">
           <div className="left">
-            <Link href="/" className="logoWrapper">
-              <Image
-                src="/assets/favicon.png"
-                alt=""
-                width={50}
-                height={50}
-                objectFit="cover"
-              />
-              <span>Annunaki Mall</span>
+            <Link href="/onboarding" className="item seller">
+              <GoPencil />
+              <span>Become a Seller</span>
             </Link>
-            <div className="item">
-              <MdOutlinePhoneInTalk className="icon" />
-              <span>+234567890</span>
-            </div>
-            <Link href="/" className="item">
-              <MdOutlineEmail className="icon" />
-              <span>annunakimall@gmail.com</span>
+            <Link href="/auth" className="item start">
+              <span>Start Selling</span>
             </Link>
           </div>
           <div className="carousel">{data[currentIndex].text}</div>
           <div className="right">
-            <Link href="/contact" className="item contact">
-              <IoMdContacts className="icon" />
-              <span>Contact Us</span>
-            </Link>
-            {!currentUser ? (
+            {currentUser ? (
               <Link href="/user" className="item">
                 <IoMdContact className="icon" />
                 <span className="myAccount">My Account</span>
               </Link>
             ) : (
-              <Link href="/auth" className="item">
+              <Link href="/auth" className="item auth">
                 <IoMdPerson className="icon" />
                 <span>Login / Register</span>
               </Link>

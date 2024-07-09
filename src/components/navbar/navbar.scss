@@ -20,12 +20,17 @@
       .item {
         display: flex;
         align-items: center;
+        justify-content: center;
+        padding: 6px;
         gap: 5px;
         cursor: pointer;
         font-size: 14px;
+        border-radius: 5px;
+        transition: all 0.3s ease;
 
         &:hover {
           color: #cccccc;
+          transform: scale(1.02);
         }
 
         .icon {
@@ -48,6 +53,18 @@
         }
       }
 
+      .seller {
+        background-color: crimson;
+      }
+
+      .start {
+        background-color: $bgSecondary;
+      }
+
+      .auth {
+        background-color: teal;
+      }
+
       .hamburger {
         cursor: pointer;
         font-size: 24px;
@@ -55,30 +72,6 @@
 
         @include miniLaptop {
           display: flex;
-        }
-      }
-    }
-
-    .left {
-      .logoWrapper {
-        display: flex;
-        align-items: center;
-        gap: 5px;
-        display: none;
-
-        @include miniLaptop {
-          display: flex;
-        }
-
-        span {
-          font-size: 20px;
-          font-weight: bold;
-        }
-      }
-
-      .item {
-        @include miniLaptop {
-          display: none;
         }
       }
     }
