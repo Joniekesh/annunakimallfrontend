@@ -40,7 +40,7 @@ const Navbar = () => {
           <div className="left">
             <Link href="/onboarding" className="item seller">
               <GoPencil />
-              <span>Become a Seller</span>
+              <span>Become an Affiliate</span>
             </Link>
             <Link href="/auth" className="item start">
               <span>Start Selling</span>
