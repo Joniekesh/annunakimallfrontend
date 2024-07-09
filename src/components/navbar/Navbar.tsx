@@ -8,6 +8,7 @@ import { IoMdContacts, IoMdContact, IoMdPerson } from "react-icons/io";
 import { GiHamburgerMenu } from "react-icons/gi";
 import Image from "next/image";
 import { GoPencil } from "react-icons/go";
+import { IoMdLogIn } from "react-icons/io";
 
 const Navbar = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
@@ -55,8 +56,9 @@ const Navbar = () => {
               </Link>
             ) : (
               <Link href="/auth" className="item auth">
-                <IoMdPerson className="icon" />
-                <span>Login / Register</span>
+                <IoMdLogIn className="icon" />
+                {/* <IoMdPerson className="icon" /> */}
+                <span className="reg">Login / Register</span>
               </Link>
             )}
             <div className="hamburger">

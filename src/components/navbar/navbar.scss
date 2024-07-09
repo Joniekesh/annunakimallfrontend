@@ -40,8 +40,14 @@
           font-size: 24px;
         }
 
+        .reg {
+          @include mobile {
+            display: none;
+          }
+        }
+
         .myAccount {
-          @include mobile550 {
+          @include mobile {
             display: none;
           }
         }
