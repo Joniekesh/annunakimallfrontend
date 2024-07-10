@@ -1,15 +1,50 @@
+"use client";
+
 import React from "react";
 import "./auth.scss";
 import PagesWrapper from "@/components/pageWrapper";
-import Reg from "@/components/utilComponents/reg/Reg";
+import Link from "next/link";
+import Image from "next/image";
 
 const Page = () => {
+  const handleSubmit = async (e: any) => {
+    e.preventDefault();
+  };
+
   return (
     <PagesWrapper>
-      <div className="auth">
+      <div className="userRegister">
         <div className="container">
-          <div className="authWrapper">
-            <Reg />
+          <div className="userRegisterWrapper">
+            <div className="innerWrapper">
+              <Link href="/" className="logoWrapper">
+                <Image
+                  src="/assets/favicon.png"
+                  alt=""
+                  width={70}
+                  height={70}
+                  objectFit="cover"
+                />
+              </Link>
+              <p>Welcome to Anninnaki Mall. Login in to your account</p>
+              <span>OR</span>
+              <div className="redirects">
+                <Link className="redirect affiliate" href="/affiliate/auth">
+                  Register as an Affiliate{" "}
+                </Link>
+                <Link className="redirect seller" href="/vendor/auth">
+                  Register as a Seller{" "}
+                </Link>
+                <Link className="redirect shopper" href="/auth/register">
+                  Register as a Shopper{" "}
+                </Link>
+              </div>
+              <form onSubmit={handleSubmit}>
+                <input type="email" placeholder="Enter Email" />
+                <input type="password" placeholder="Enter Password" />
+                <button type="submit">LOGIN</button>
+              </form>
+            </div>
           </div>
         </div>
       </div>
