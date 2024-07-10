@@ -26,7 +26,7 @@ const Page = () => {
                   objectFit="cover"
                 />
               </Link>
-              <p>Welcome to Annunnaki Mall. Login to your account</p>
+              <p>Welcome to Annunaki Mall. Login to your account</p>
 
               <form onSubmit={handleSubmit}>
                 <input type="email" placeholder="Enter Email" />
