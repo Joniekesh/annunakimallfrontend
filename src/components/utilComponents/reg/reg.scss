@@ -71,7 +71,26 @@
             border: 2px solid $bgPrimary;
           }
         }
+
+        .passwordContainer {
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+          border: 1px solid #ddd;
+          border-radius: 5px;
+          padding-right: 10px;
+
+          input {
+            border: none;
+          }
+
+          span {
+            font-size: 24px;
+            cursor: pointer;
+          }
+        }
       }
+
       .submitBtn {
         background-color: $bgPrimary;
         color: $textLight;

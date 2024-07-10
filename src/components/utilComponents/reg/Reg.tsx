@@ -3,6 +3,8 @@
 import Link from "next/link";
 import "./reg.scss";
 import Image from "next/image";
+import { IoMdEye, IoMdEyeOff } from "react-icons/io";
+import { useState } from "react";
 
 const Reg = ({
   isAffiliate,
@@ -11,6 +13,8 @@ const Reg = ({
   isAffiliate?: boolean;
   isVendor?: boolean;
 }) => {
+  const [active, setActive] = useState(false);
+
   const handleSubmit = async (e: any) => {
     e.preventDefault();
   };
@@ -55,8 +59,24 @@ const Reg = ({
               <input type="text" placeholder="Phone Number" />
               <input type="text" placeholder="Confirm Phone Numer" />
               <input type="email" placeholder="Email" />
-              <input type="password" placeholder="Password" />
-              <input type="password" placeholder="Confirm Password" />
+              <div className="passwordContainer">
+                <input
+                  type={active ? "text" : "password"}
+                  placeholder="Password"
+                />
+                <span onClick={() => setActive((prev) => !prev)}>
+                  {active ? <IoMdEyeOff /> : <IoMdEye />}
+                </span>
+              </div>
+              <div className="passwordContainer">
+                <input
+                  type={active ? "text" : "password"}
+                  placeholder="Confirm Password"
+                />
+                <span onClick={() => setActive((prev) => !prev)}>
+                  {active ? <IoMdEyeOff /> : <IoMdEye />}
+                </span>
+              </div>
             </div>
             <select>
               <option value="">---SELECT---</option>

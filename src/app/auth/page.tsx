@@ -26,8 +26,14 @@ const Page = () => {
                   objectFit="cover"
                 />
               </Link>
-              <p>Welcome to Anninnaki Mall. Login in to your account</p>
-              <span>OR</span>
+              <p>Welcome to Anninnaki Mall. Login to your account</p>
+
+              <form onSubmit={handleSubmit}>
+                <input type="email" placeholder="Enter Email" />
+                <input type="password" placeholder="Enter Password" />
+                <button type="submit">LOGIN</button>
+              </form>
+              <span>Do not have an accoun?</span>
               <div className="redirects">
                 <Link className="redirect affiliate" href="/affiliate/auth">
                   Register as an Affiliate{" "}
@@ -39,11 +45,6 @@ const Page = () => {
                   Register as a Shopper{" "}
                 </Link>
               </div>
-              <form onSubmit={handleSubmit}>
-                <input type="email" placeholder="Enter Email" />
-                <input type="password" placeholder="Enter Password" />
-                <button type="submit">LOGIN</button>
-              </form>
             </div>
           </div>
         </div>
