@@ -1,12 +1,15 @@
 "use client";
 
-import React from "react";
+import React, { useState } from "react";
 import "./auth.scss";
 import PagesWrapper from "@/components/pageWrapper";
 import Link from "next/link";
 import Image from "next/image";
+import { IoMdEye, IoMdEyeOff } from "react-icons/io";
 
 const Page = () => {
+  const [active, setActive] = useState(false);
+
   const handleSubmit = async (e: any) => {
     e.preventDefault();
   };
@@ -30,9 +33,20 @@ const Page = () => {
 
               <form onSubmit={handleSubmit}>
                 <input type="email" placeholder="Enter Email" />
-                <input type="password" placeholder="Enter Password" />
+                <div className="passwordContainer">
+                  <input
+                    type={active ? "text" : "password"}
+                    placeholder="Password"
+                  />
+                  <span onClick={() => setActive((prev) => !prev)}>
+                    {active ? <IoMdEyeOff /> : <IoMdEye />}
+                  </span>
+                </div>
                 <button type="submit">LOGIN</button>
               </form>
+              <Link href="/forgotPassword" className="underline text-green-600">
+                Forgot Password?
+              </Link>
               <span>Do not have an accoun?</span>
               <div className="redirects">
                 <Link className="redirect affiliate" href="/affiliate/auth">
